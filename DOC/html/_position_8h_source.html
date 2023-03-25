@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ATC:  File sorgente C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/Position.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generato da Doxygen 1.7.4 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="compass-icon.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ATC</div>
+   <div id="projectbrief">Advanced Trip Computer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/Position.h</div>  </div>
+</div>
+<div class="contents">
+<a href="_position_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_date_8h.html">Date.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_time_8h.html">Time.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_latitude_8h.html">Latitude.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_longitude_8h.html">Longitude.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_g_p_s2_u_t_m_8_h.html">GPS2UTM.H</a>&quot;</span>
+<a name="l00013"></a>00013 }
+<a name="l00017"></a><a class="code" href="class_position.html">00017</a> <span class="keyword">class </span><a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> {
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">private</span>:
+<a name="l00020"></a>00020 
+<a name="l00023"></a><a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6">00023</a> <a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> <a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a>;                              
+<a name="l00026"></a><a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40">00026</a> <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> <a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a>;              
+<a name="l00029"></a><a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4">00029</a> <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> <a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a>;
+<a name="l00032"></a><a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00">00032</a> <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a>;    
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">public</span>:
+<a name="l00035"></a>00035 
+<a name="l00039"></a><a class="code" href="class_position.html#af40a2beeb25f9a87f89bed941a5a4c41">00039</a> <a class="code" href="class_position.html#af40a2beeb25f9a87f89bed941a5a4c41" title="costruttore predefinito">Position</a>(<span class="keywordtype">void</span>)
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041  <a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> d(1,1,2000);
+<a name="l00042"></a>00042  <a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a> = d;
+<a name="l00043"></a>00043  <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> t(0,0,0);
+<a name="l00044"></a>00044  <a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a> = t;
+<a name="l00045"></a>00045  <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> lat(0,0,0,NORD);
+<a name="l00046"></a>00046  <a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a> = lat;
+<a name="l00047"></a>00047  <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> lon(0,0,0,EST);
+<a name="l00048"></a>00048  <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a> = lon;
+<a name="l00049"></a>00049 }
+<a name="l00057"></a>00057 <a class="code" href="class_position.html#af40a2beeb25f9a87f89bed941a5a4c41" title="costruttore predefinito">Position</a>(<a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> d, <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> t, <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> lat, <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> lon)
+<a name="l00058"></a>00058 {
+<a name="l00059"></a>00059  <a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a> = d;
+<a name="l00060"></a>00060  <a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a> = t;
+<a name="l00061"></a>00061  <a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a> = lat;
+<a name="l00062"></a>00062  <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a> = lon;
+<a name="l00063"></a>00063 }
+<a name="l00067"></a><a class="code" href="class_position.html#a4d19b9a1fd82d298eeed8acf48db18aa">00067</a> <a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> <a class="code" href="class_position.html#a4d19b9a1fd82d298eeed8acf48db18aa">getDate</a>(<span class="keywordtype">void</span>)
+<a name="l00068"></a>00068 {
+<a name="l00069"></a>00069  <span class="keywordflow">return</span> <a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a>;
+<a name="l00070"></a>00070 }
+<a name="l00074"></a><a class="code" href="class_position.html#a13a18c15065d6f6e7fcc08e1e784a77b">00074</a> <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> <a class="code" href="class_position.html#a13a18c15065d6f6e7fcc08e1e784a77b">getTime</a>(<span class="keywordtype">void</span>)
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076  <span class="keywordflow">return</span> <a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a>;
+<a name="l00077"></a>00077 }
+<a name="l00081"></a><a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">00081</a> <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> <a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>(<span class="keywordtype">void</span>)
+<a name="l00082"></a>00082 {
+<a name="l00083"></a>00083  <span class="keywordflow">return</span> <a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a>;
+<a name="l00084"></a>00084 }
+<a name="l00088"></a><a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">00088</a> <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> <a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>(<span class="keywordtype">void</span>)
+<a name="l00089"></a>00089 {
+<a name="l00090"></a>00090  <span class="keywordflow">return</span> <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a>;
+<a name="l00091"></a>00091 }
+<a name="l00095"></a><a class="code" href="class_position.html#aa58e0947be54441993af56f347954a8c">00095</a> <span class="keywordtype">double</span> <a class="code" href="class_position.html#aa58e0947be54441993af56f347954a8c">getNorth</a>(<span class="keywordtype">void</span>)
+<a name="l00096"></a>00096 {
+<a name="l00097"></a>00097  <span class="keywordtype">double</span> north, east;
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099  <a class="code" href="_g_p_s2_u_t_m_8_h.html#aa9047adb459d1f13f69425105b1aaed1" title="conversione di coordinate WGS84 (latitudine/longitudine) in coordinate UTM (metri)">GPS2UTM</a>(<a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a>.<a class="code" href="class_latitude.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>(), <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a>.<a class="code" href="class_longitude.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>(), &amp;east, &amp;north);
+<a name="l00100"></a>00100  <span class="keywordflow">return</span> north;
+<a name="l00101"></a>00101 }
+<a name="l00105"></a><a class="code" href="class_position.html#ac4bd4a7a20a58bdea3e670f49bfc2549">00105</a> <span class="keywordtype">double</span> <a class="code" href="class_position.html#ac4bd4a7a20a58bdea3e670f49bfc2549">getEast</a>(<span class="keywordtype">void</span>)
+<a name="l00106"></a>00106 {
+<a name="l00107"></a>00107  <span class="keywordtype">double</span> north, east;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109  <a class="code" href="_g_p_s2_u_t_m_8_h.html#aa9047adb459d1f13f69425105b1aaed1" title="conversione di coordinate WGS84 (latitudine/longitudine) in coordinate UTM (metri)">GPS2UTM</a>(<a class="code" href="class_position.html#a336b37ee42086dd8848e89c39af0fea4" title="latitudine">latitude</a>.<a class="code" href="class_latitude.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>(), <a class="code" href="class_position.html#a6b2179bced5805aee7ac729e08473a00" title="longitudine">longitude</a>.<a class="code" href="class_longitude.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>(), &amp;east, &amp;north);
+<a name="l00110"></a>00110  <span class="keywordflow">return</span> east;
+<a name="l00111"></a>00111 }
+<a name="l00117"></a><a class="code" href="class_position.html#addca59e7a3e45f519d1acd9e5d37038c">00117</a> <span class="keywordtype">double</span> <a class="code" href="class_position.html#addca59e7a3e45f519d1acd9e5d37038c" title="calcola la distanza spaziale in metri da una posizione">distance</a>(<a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> p)
+<a name="l00118"></a>00118 {
+<a name="l00119"></a>00119  <span class="keywordtype">double</span> dist = sqrt(pow(<a class="code" href="class_position.html#aa58e0947be54441993af56f347954a8c">getNorth</a>()-p.<a class="code" href="class_position.html#aa58e0947be54441993af56f347954a8c">getNorth</a>(),2)+pow(<a class="code" href="class_position.html#ac4bd4a7a20a58bdea3e670f49bfc2549">getEast</a>()-p.<a class="code" href="class_position.html#ac4bd4a7a20a58bdea3e670f49bfc2549">getEast</a>(),2));
+<a name="l00120"></a>00120  <span class="keywordflow">return</span> dist;
+<a name="l00121"></a>00121 }
+<a name="l00127"></a><a class="code" href="class_position.html#a7db75742266f1afabbfdc190d21273ce">00127</a> <span class="keywordtype">int</span> <a class="code" href="class_position.html#a7db75742266f1afabbfdc190d21273ce" title="calcola la differenza temporale in secondi da una posizione">elapsedTime</a>(<a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> p)
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129  <span class="keywordtype">double</span> hours;
+<a name="l00130"></a>00130  <span class="keywordtype">int</span> seconds;
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132  hours = double(<a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a>.<a class="code" href="class_date.html#add27848f78780e92d0c606322786d0a2" title="calcola la differenza in giorni da una data">dayDifference</a>(p.<a class="code" href="class_position.html#ade6a701b82b93dfb7eae4e79cd3b18a6" title="data">date</a>)*24) + <a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a>.<a class="code" href="class_time.html#a0ce6df09d0de6c1dd85c6937d27b2e77" title="calcola la differenza in ore da un orario">hourDifference</a>(p.<a class="code" href="class_position.html#a70c092a6aebace0b1ea406e14da78a40" title="orario">time</a>);
+<a name="l00133"></a>00133  seconds = int(hours*3600.);
+<a name="l00134"></a>00134  <span class="keywordflow">return</span> seconds;
+<a name="l00135"></a>00135 }
+<a name="l00136"></a>00136 };
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generato Mar 1 Mag 2012 17:16:21 per ATC da&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

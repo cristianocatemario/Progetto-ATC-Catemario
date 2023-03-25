@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ATC:  File sorgente C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/ATC.H</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generato da Doxygen 1.7.4 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="compass-icon.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ATC</div>
+   <div id="projectbrief">Advanced Trip Computer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/ATC.H</div>  </div>
+</div>
+<div class="contents">
+<a href="_a_t_c_8_h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_g_p_s_8_h.html">GPS.H</a>&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span>
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="des_8h.html">DES.H</a>&quot;</span>
+<a name="l00014"></a>00014 }
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="preprocessor">#define SEC_PER_WEEK    3600*24*7 // secondi in una settimana</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define PASSWORD_FILE   &quot;password.bin&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define POSITION_FILE   &quot;position.bin&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00023"></a><a class="code" href="struct_p_o_s_i_t_i_o_n.html">00023</a> <span class="keyword">struct </span><a class="code" href="struct_p_o_s_i_t_i_o_n.html" title="formato del record del file binario di salvataggio automatico delle posizioni">POSITION</a>
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> day;                      <span class="comment">// giorno</span>
+<a name="l00026"></a>00026  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> month;            <span class="comment">// mese</span>
+<a name="l00027"></a>00027  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> year;                     <span class="comment">// anno</span>
+<a name="l00028"></a>00028  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hour;                     <span class="comment">// ore</span>
+<a name="l00029"></a>00029  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minute;           <span class="comment">// minuti</span>
+<a name="l00030"></a>00030  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> second;           <span class="comment">// secondi</span>
+<a name="l00031"></a>00031  <span class="keywordtype">int</span> lat_sign;                          <span class="comment">// -1 =&gt; S, +1 =&gt; N</span>
+<a name="l00032"></a>00032  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lat_degree;       <span class="comment">// latitudine: gradi</span>
+<a name="l00033"></a>00033  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lat_minute;       <span class="comment">// latitudine: primi</span>
+<a name="l00034"></a>00034  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lat_second;       <span class="comment">// latitudine: secondi</span>
+<a name="l00035"></a>00035  <span class="keywordtype">int</span> lon_sign;                          <span class="comment">// -1 =&gt; W, +1 =&gt; E</span>
+<a name="l00036"></a>00036  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lon_degree;       <span class="comment">// longitudine: gradi</span>
+<a name="l00037"></a>00037  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lon_minute;       <span class="comment">// longitudine: primi</span>
+<a name="l00038"></a>00038  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lon_second;       <span class="comment">// longitudine: secondi</span>
+<a name="l00039"></a>00039 };
+<a name="l00040"></a>00040 
+<a name="l00044"></a><a class="code" href="class_a_t_c.html">00044</a> <span class="keyword">class </span><a class="code" href="class_a_t_c.html" title="classe principale dell&#39;applicazione Advance Trip Computer">ATC</a> : <span class="keyword">public</span> <a class="code" href="class_g_p_sobserver.html" title="classe astratta per la notifica degli eventi generati dal dispositivo GPS">GPSobserver</a>
+<a name="l00045"></a>00045 {
+<a name="l00046"></a>00046  <span class="keyword">private</span>:
+<a name="l00047"></a>00047 
+<a name="l00050"></a><a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2">00050</a>  <span class="keywordtype">bool</span> <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a>;
+<a name="l00053"></a><a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80">00053</a>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>;
+<a name="l00056"></a><a class="code" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb">00056</a>  <span class="keywordtype">double</span> <a class="code" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb" title="direzione attuale (in gradi rispetto al Nord)">actualDirection</a>;
+<a name="l00059"></a><a class="code" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839">00059</a>  <span class="keywordtype">double</span> <a class="code" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839" title="velocita&#39; attuale (in Km/h)">actualSpeed</a>;
+<a name="l00062"></a><a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc">00062</a>  <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a>* <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>;
+<a name="l00065"></a><a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8">00065</a>  FILE* <a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>;
+<a name="l00066"></a>00066 
+<a name="l00072"></a><a class="code" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2">00072</a>  <span class="keywordtype">bool</span> <a class="code" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2" title="verifica la password fornita con la versione cifrata nel file">checkPassword</a>(<span class="keywordtype">char</span> password[])
+<a name="l00073"></a>00073  {
+<a name="l00074"></a>00074   BYTE clear[8], coded[8], pswd[8];
+<a name="l00075"></a>00075   <span class="keywordtype">int</span> passwordLen = strlen(password);
+<a name="l00076"></a>00076   FILE* passwordFile; 
+<a name="l00077"></a>00077   
+<a name="l00078"></a>00078   <span class="comment">// preparazione password (aggiustamento per lunghezza minore/maggiore 8 caratteri)</span>
+<a name="l00079"></a>00079   <span class="keywordflow">if</span> (passwordLen&lt;=8)
+<a name="l00080"></a>00080     {
+<a name="l00081"></a>00081          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;passwordLen; i++)
+<a name="l00082"></a>00082             clear[i] = password[i];
+<a name="l00083"></a>00083          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=passwordLen; i&lt;8; i++)
+<a name="l00084"></a>00084         clear[i] = <span class="charliteral">&#39; &#39;</span>;
+<a name="l00085"></a>00085     }
+<a name="l00086"></a>00086   <span class="keywordflow">else</span>
+<a name="l00087"></a>00087       {
+<a name="l00088"></a>00088            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; i++)
+<a name="l00089"></a>00089               clear[i] = password[i];
+<a name="l00090"></a>00090       }
+<a name="l00091"></a>00091   <span class="comment">// codifica password</span>
+<a name="l00092"></a>00092   DES_encrypt(clear, coded, clear);
+<a name="l00093"></a>00093   <span class="comment">// recupero file codificata da file</span>
+<a name="l00094"></a>00094   passwordFile = fopen(PASSWORD_FILE,<span class="stringliteral">&quot;rb&quot;</span>);
+<a name="l00095"></a>00095   fread(pswd, 8, 1, passwordFile);
+<a name="l00096"></a>00096   fclose(passwordFile);
+<a name="l00097"></a>00097   <span class="comment">// confronto password</span>
+<a name="l00098"></a>00098   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; i++)
+<a name="l00099"></a>00099      <span class="keywordflow">if</span> (coded[i] != pswd[i])
+<a name="l00100"></a>00100            <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00101"></a>00101   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00102"></a>00102  }
+<a name="l00109"></a><a class="code" href="class_a_t_c.html#a3e9c7262773f32f75bb894133f029049">00109</a>  <span class="keywordtype">double</span> <a class="code" href="class_a_t_c.html#a3e9c7262773f32f75bb894133f029049" title="calcola la distanza totale percorsa">getTotalDistance</a>(<span class="keywordtype">void</span>)
+<a name="l00110"></a>00110  {
+<a name="l00111"></a>00111   <span class="keywordtype">double</span> distance = 0;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113   <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=1; i&lt;<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>; i++)
+<a name="l00114"></a>00114      distance += <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].distance(<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i-1]);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116   <span class="keywordflow">return</span> distance/1000.0;
+<a name="l00117"></a>00117  }
+<a name="l00123"></a><a class="code" href="class_a_t_c.html#a79b76f666c7c095c3e4d283b6dd21955">00123</a>  <span class="keywordtype">double</span> <a class="code" href="class_a_t_c.html#a79b76f666c7c095c3e4d283b6dd21955" title="calcola il tempo trascorso dalla partenza">getElapsedTime</a>(<span class="keywordtype">void</span>)
+<a name="l00124"></a>00124  {
+<a name="l00125"></a>00125   <span class="keywordtype">int</span> time;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> &gt; 1)
+<a name="l00128"></a>00128     time = <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[0].<a class="code" href="class_position.html#a7db75742266f1afabbfdc190d21273ce" title="calcola la differenza temporale in secondi da una posizione">elapsedTime</a>(<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>-1]);
+<a name="l00129"></a>00129   <span class="keywordflow">else</span>
+<a name="l00130"></a>00130           time = 0;
+<a name="l00131"></a>00131   
+<a name="l00132"></a>00132   <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)time/3600.0;
+<a name="l00133"></a>00133  }
+<a name="l00139"></a><a class="code" href="class_a_t_c.html#ae113b9849520a8b5b16e52651e6b8704">00139</a>  <span class="keywordtype">int</span> <a class="code" href="class_a_t_c.html#ae113b9849520a8b5b16e52651e6b8704" title="carica le posizioni da file">loadFromFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> filename[])
+<a name="l00140"></a>00140  {
+<a name="l00141"></a>00141   <a class="code" href="struct_p_o_s_i_t_i_o_n.html" title="formato del record del file binario di salvataggio automatico delle posizioni">POSITION</a> pos;
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143   <a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a> = fopen(filename, <span class="stringliteral">&quot;rb&quot;</span>);
+<a name="l00144"></a>00144   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a> != NULL)
+<a name="l00145"></a>00145     {
+<a name="l00146"></a>00146          <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> = 0;
+<a name="l00147"></a>00147          <span class="keywordflow">while</span> (!feof(<a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>))
+<a name="l00148"></a>00148               {
+<a name="l00149"></a>00149                    <span class="keywordflow">if</span> (fread(&amp;pos,<span class="keyword">sizeof</span>(<a class="code" href="struct_p_o_s_i_t_i_o_n.html" title="formato del record del file binario di salvataggio automatico delle posizioni">POSITION</a>),1,<a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>) == 1)
+<a name="l00150"></a>00150                      {
+<a name="l00151"></a>00151                           <a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> date(pos.day, pos.month, pos.year);
+<a name="l00152"></a>00152                           <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> time(pos.hour, pos.minute, pos.second);
+<a name="l00153"></a>00153                           <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> lat(pos.lat_degree, pos.lat_minute, pos.lat_second, pos.lat_sign);
+<a name="l00154"></a>00154                           <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> lon(pos.lon_degree, pos.lon_minute, pos.lon_second, pos.lon_sign);
+<a name="l00155"></a>00155                           <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> position(date, time, lat, lon);
+<a name="l00156"></a>00156                           <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>] = position;
+<a name="l00157"></a>00157                           <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>++;
+<a name="l00158"></a>00158                      };
+<a name="l00159"></a>00159               }
+<a name="l00160"></a>00160     }
+<a name="l00161"></a>00161   <span class="keywordflow">else</span>
+<a name="l00162"></a>00162           <span class="keywordflow">return</span>-1;
+<a name="l00163"></a>00163   fclose(<a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>);
+<a name="l00164"></a>00164   <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>;
+<a name="l00165"></a>00165  }
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168  <span class="keyword">public</span>:
+<a name="l00169"></a>00169 
+<a name="l00175"></a><a class="code" href="class_a_t_c.html#aab016d6c5eff3f457fb161e3491b51fa">00175</a>  <a class="code" href="class_a_t_c.html#aab016d6c5eff3f457fb161e3491b51fa" title="costruttore">ATC</a>(<span class="keywordtype">void</span>)
+<a name="l00176"></a>00176  {
+<a name="l00177"></a>00177   <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> = <span class="keyword">false</span>;
+<a name="l00178"></a>00178   <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> = 0;
+<a name="l00179"></a>00179   <a class="code" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb" title="direzione attuale (in gradi rispetto al Nord)">actualDirection</a> = 0.0;
+<a name="l00180"></a>00180   <a class="code" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839" title="velocita&#39; attuale (in Km/h)">actualSpeed</a> = 0.0;
+<a name="l00181"></a>00181   <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a> = <span class="keyword">new</span> <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a>[SEC_PER_WEEK];
+<a name="l00182"></a>00182   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ae113b9849520a8b5b16e52651e6b8704" title="carica le posizioni da file">loadFromFile</a>(POSITION_FILE) &gt;= 0)
+<a name="l00183"></a>00183     <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> = <span class="keyword">true</span>;
+<a name="l00184"></a>00184  }
+<a name="l00189"></a>00189  ~<a class="code" href="class_a_t_c.html" title="classe principale dell&#39;applicazione Advance Trip Computer">ATC</a>(<span class="keywordtype">void</span>)
+<a name="l00190"></a>00190  {
+<a name="l00191"></a>00191   <span class="keyword">delete</span> <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>;
+<a name="l00192"></a>00192  }
+<a name="l00198"></a><a class="code" href="class_a_t_c.html#a0e48e053651b533d8e9357d50738f7a6">00198</a>  <span class="keywordtype">bool</span> <a class="code" href="class_a_t_c.html#a0e48e053651b533d8e9357d50738f7a6" title="stato del viaggio">isTrip</a>(<span class="keywordtype">void</span>)
+<a name="l00199"></a>00199  {
+<a name="l00200"></a>00200   <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a>;
+<a name="l00201"></a>00201  }
+<a name="l00207"></a><a class="code" href="class_a_t_c.html#a432268a178004a887536e1c6facc664c">00207</a>  <span class="keywordtype">void</span> <a class="code" href="class_a_t_c.html#a432268a178004a887536e1c6facc664c" title="inizio del viaggio e memorizzazione della password">beginJourney</a>(<span class="keywordtype">char</span> password[])
+<a name="l00208"></a>00208  {
+<a name="l00209"></a>00209   BYTE clear[8], coded[8];
+<a name="l00210"></a>00210   <span class="keywordtype">int</span> passwordLen = strlen(password);
+<a name="l00211"></a>00211   FILE *passwordFile; 
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a>) <span class="comment">// viaggio in corso</span>
+<a name="l00214"></a>00214     <span class="keywordflow">return</span>;
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216   <span class="comment">// preparazione password (aggiustamento per lunghezza minore/maggiore 8 caratteri)</span>
+<a name="l00217"></a>00217   <span class="keywordflow">if</span> (passwordLen&lt;=8)
+<a name="l00218"></a>00218     {
+<a name="l00219"></a>00219          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;passwordLen; i++)
+<a name="l00220"></a>00220             clear[i] = password[i];
+<a name="l00221"></a>00221          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=passwordLen; i&lt;8; i++)
+<a name="l00222"></a>00222         clear[i] = <span class="charliteral">&#39; &#39;</span>;
+<a name="l00223"></a>00223     }
+<a name="l00224"></a>00224   <span class="keywordflow">else</span>
+<a name="l00225"></a>00225       {
+<a name="l00226"></a>00226            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;8; i++)
+<a name="l00227"></a>00227               clear[i] = password[i];
+<a name="l00228"></a>00228       }
+<a name="l00229"></a>00229   <span class="comment">// codifica password</span>
+<a name="l00230"></a>00230   DES_encrypt(clear, coded, clear);
+<a name="l00231"></a>00231   <span class="comment">// scrittura password codificata su file</span>
+<a name="l00232"></a>00232   passwordFile = fopen(PASSWORD_FILE,<span class="stringliteral">&quot;wb&quot;</span>);
+<a name="l00233"></a>00233   fwrite(coded, 8, 1, passwordFile);
+<a name="l00234"></a>00234   fclose(passwordFile);
+<a name="l00235"></a>00235   <span class="comment">// rimozione file delle posizioni</span>
+<a name="l00236"></a>00236   <span class="keyword">remove</span>(POSITION_FILE);
+<a name="l00237"></a>00237   <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> = 0;
+<a name="l00238"></a>00238   <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> = <span class="keyword">true</span>;
+<a name="l00239"></a>00239  }
+<a name="l00246"></a><a class="code" href="class_a_t_c.html#a9794ab29846fa1d68f1dab43d01b2966">00246</a>  <span class="keywordtype">void</span> <a class="code" href="class_a_t_c.html#a9794ab29846fa1d68f1dab43d01b2966" title="fine del viaggio">endJourney</a>(<span class="keywordtype">char</span> password[])
+<a name="l00247"></a>00247  {
+<a name="l00248"></a>00248   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> == <span class="keyword">false</span>)
+<a name="l00249"></a>00249     <span class="keywordflow">return</span>;
+<a name="l00250"></a>00250   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2" title="verifica la password fornita con la versione cifrata nel file">checkPassword</a>(password))
+<a name="l00251"></a>00251     {
+<a name="l00252"></a>00252          <span class="keyword">remove</span>(POSITION_FILE);
+<a name="l00253"></a>00253          <span class="keyword">remove</span>(PASSWORD_FILE);
+<a name="l00254"></a>00254          <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> = 0;
+<a name="l00255"></a>00255          <a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> = <span class="keyword">false</span>;
+<a name="l00256"></a>00256     }
+<a name="l00257"></a>00257  }
+<a name="l00265"></a><a class="code" href="class_a_t_c.html#a0384faec0aa3400cc8a299c1cb93c319">00265</a>  <span class="keywordtype">void</span> <a class="code" href="class_a_t_c.html#a0384faec0aa3400cc8a299c1cb93c319" title="richiesta informazioni sul viaggio">getJourneyInfo</a>(<span class="keywordtype">double</span>* totalDistance, <span class="keywordtype">double</span>* elapsedTime, <span class="keywordtype">double</span>* meanSpeed)
+<a name="l00266"></a>00266  {
+<a name="l00267"></a>00267   *totalDistance = <a class="code" href="class_a_t_c.html#a3e9c7262773f32f75bb894133f029049" title="calcola la distanza totale percorsa">getTotalDistance</a>();
+<a name="l00268"></a>00268   *elapsedTime = <a class="code" href="class_a_t_c.html#a79b76f666c7c095c3e4d283b6dd21955" title="calcola il tempo trascorso dalla partenza">getElapsedTime</a>();
+<a name="l00269"></a>00269   <span class="keywordflow">if</span> (*elapsedTime == 0.0)
+<a name="l00270"></a>00270     *meanSpeed = 0.0;
+<a name="l00271"></a>00271   <span class="keywordflow">else</span>
+<a name="l00272"></a>00272           *meanSpeed = (*totalDistance)/(*elapsedTime);
+<a name="l00273"></a>00273  }
+<a name="l00283"></a><a class="code" href="class_a_t_c.html#a494cb7655e6548b0f4ac74cc03ce4a4c">00283</a>  <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> <a class="code" href="class_a_t_c.html#a494cb7655e6548b0f4ac74cc03ce4a4c" title="richiesta informazioni su una posizione nel corso del viaggio">getPastPosition</a>(<a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> date, <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> time, <span class="keywordtype">char</span> password[])
+<a name="l00284"></a>00284  {
+<a name="l00285"></a>00285   <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> lat;
+<a name="l00286"></a>00286   <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> lon;
+<a name="l00287"></a>00287   <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> pos(date, time, lat, lon); <span class="comment">// posizione fittizia con data/ora della richiesta</span>
+<a name="l00288"></a>00288   
+<a name="l00289"></a>00289   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> == 0) <span class="comment">// viaggio non in corso</span>
+<a name="l00290"></a>00290     <span class="keywordflow">return</span> pos;
+<a name="l00291"></a>00291   
+<a name="l00292"></a>00292   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2" title="verifica la password fornita con la versione cifrata nel file">checkPassword</a>(password))
+<a name="l00293"></a>00293     {
+<a name="l00294"></a>00294      <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[0].elapsedTime(pos)&lt;0) <span class="comment">// data/ora indicata precedente al momento della partenza</span>
+<a name="l00295"></a>00295            <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[0]; <span class="comment">// prima posizione registrata</span>
+<a name="l00296"></a>00296          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>; i++) <span class="comment">// ricerca posizione immediatamente successiva alla data/ora richiesta</span>
+<a name="l00297"></a>00297             <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].elapsedTime(pos)&lt;=0)
+<a name="l00298"></a>00298                   <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i];
+<a name="l00299"></a>00299          <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[positionCounter-1]; <span class="comment">// ultima posizione registrata</span>
+<a name="l00300"></a>00300     }
+<a name="l00301"></a>00301   <span class="keywordflow">else</span>
+<a name="l00302"></a>00302       <span class="keywordflow">return</span> pos;
+<a name="l00303"></a>00303  }
+<a name="l00312"></a><a class="code" href="class_a_t_c.html#a2aa1666500028e4d739138f46ce65c0b">00312</a>  <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> <a class="code" href="class_a_t_c.html#a2aa1666500028e4d739138f46ce65c0b" title="richiesta posizione attuale">getActualPosition</a>(<span class="keywordtype">double</span>* speed, <span class="keywordtype">double</span>* direction)
+<a name="l00313"></a>00313  {
+<a name="l00314"></a>00314   <a class="code" href="class_latitude.html" title="classe per la rappresentazione delle latitudini">Latitude</a> lat;
+<a name="l00315"></a>00315   <a class="code" href="class_longitude.html" title="classe per la rappresentazione delle longitudini">Longitude</a> lon;
+<a name="l00316"></a>00316   <a class="code" href="class_date.html" title="classe per la gestione delle date">Date</a> date;
+<a name="l00317"></a>00317   <a class="code" href="class_time.html" title="classe per la gestione degli orari">Time</a> time;
+<a name="l00318"></a>00318   <a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> pos(date, time, lat, lon); <span class="comment">// posizione fittizia con data/ora fittizie</span>
+<a name="l00319"></a>00319   
+<a name="l00320"></a>00320   *speed = <a class="code" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839" title="velocita&#39; attuale (in Km/h)">actualSpeed</a>;
+<a name="l00321"></a>00321   *direction = <a class="code" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb" title="direzione attuale (in gradi rispetto al Nord)">actualDirection</a>;
+<a name="l00322"></a>00322   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> == 0) <span class="comment">// viaggio non in corso</span>
+<a name="l00323"></a>00323     <span class="keywordflow">return</span> pos;
+<a name="l00324"></a>00324     
+<a name="l00325"></a>00325   <span class="keywordflow">return</span> <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>-1];
+<a name="l00326"></a>00326  }
+<a name="l00333"></a><a class="code" href="class_a_t_c.html#a9bb3823cee7e8d3a375c80a8f9556237">00333</a>  <span class="keywordtype">void</span> <a class="code" href="class_a_t_c.html#a9bb3823cee7e8d3a375c80a8f9556237" title="salvataggio su file testuale delle posizioni registrate">saveToFile</a>(<span class="keywordtype">char</span> filename[], <span class="keywordtype">char</span> password[])
+<a name="l00334"></a>00334  {
+<a name="l00335"></a>00335   FILE* <a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>;
+<a name="l00336"></a>00336   <span class="keywordtype">char</span> <span class="keywordtype">string</span>[128], tmp[8];
+<a name="l00337"></a>00337   <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> crc;
+<a name="l00338"></a>00338 
+<a name="l00339"></a>00339   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2" title="stato dell&#39;applicazione (viaggio in corso)">trip</a> == <span class="keyword">false</span>)
+<a name="l00340"></a>00340     <span class="keywordflow">return</span>;
+<a name="l00341"></a>00341   <span class="keywordflow">if</span> (!<a class="code" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2" title="verifica la password fornita con la versione cifrata nel file">checkPassword</a>(password))
+<a name="l00342"></a>00342     <span class="keywordflow">return</span>;
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344   positionFile = fopen(filename,<span class="stringliteral">&quot;wt&quot;</span>);
+<a name="l00345"></a>00345   <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>; i++)
+<a name="l00346"></a>00346      {
+<a name="l00347"></a>00347           sprintf(<span class="keywordtype">string</span>,<span class="stringliteral">&quot;$GPRMC,%02i%02i%02i.000,A,%02i%02.4f,%c,%03i%02.4f,%c,0.00,000.00,%02i%02i%02i*&quot;</span>,
+<a name="l00348"></a>00348                   <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getTime().getHour(), <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getTime().getMinute(), <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getTime().getSecond(),
+<a name="l00349"></a>00349                   <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLatitude().getDegree(),(<span class="keywordtype">double</span>)<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLatitude().getMinute()+(<span class="keywordtype">double</span>)<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLatitude().getSecond()/60.0,(<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLatitude().getOrientation()&gt;0 ? <span class="charliteral">&#39;N&#39;</span> : <span class="charliteral">&#39;S&#39;</span>),
+<a name="l00350"></a>00350                       <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLongitude().getDegree(),(<span class="keywordtype">double</span>)<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLongitude().getMinute()+(<span class="keywordtype">double</span>)<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLongitude().getSecond()/60.0,(<a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getLongitude().getOrientation()&gt;0 ? <span class="charliteral">&#39;E&#39;</span> : <span class="charliteral">&#39;W&#39;</span>),
+<a name="l00351"></a>00351                       <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getDate().getDay(), <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getDate().getMonth(), <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[i].getDate().getYear()-2000);
+<a name="l00352"></a>00352       crc = 0x00;
+<a name="l00353"></a>00353       <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=1; <span class="keywordtype">string</span>[i]!=<span class="charliteral">&#39;*&#39;</span>; i++)
+<a name="l00354"></a>00354          crc ^= <span class="keywordtype">string</span>[i];
+<a name="l00355"></a>00355       sprintf(tmp,<span class="stringliteral">&quot;%02X&quot;</span>,crc);
+<a name="l00356"></a>00356       fprintf(positionFile,<span class="stringliteral">&quot;%s%s\r\n&quot;</span>,<span class="keywordtype">string</span>,tmp);
+<a name="l00357"></a>00357          }
+<a name="l00358"></a>00358   fclose(positionFile);
+<a name="l00359"></a>00359  }
+<a name="l00367"></a><a class="code" href="class_a_t_c.html#a0c06db972a947763c9cb9215e37b46ef">00367</a>  <span class="keywordtype">void</span> <a class="code" href="class_a_t_c.html#a0c06db972a947763c9cb9215e37b46ef" title="funzione ereditata dalla classe GPSobserver ed invocata dalla classe GPS per l&#39;aggiornamento della po...">GPSnotify</a>(<a class="code" href="class_position.html" title="classe per la rappresentazione di una posizione geografica associata ad un istante temporale...">Position</a> position, <span class="keywordtype">double</span> direction, <span class="keywordtype">double</span> speed)
+<a name="l00368"></a>00368  {
+<a name="l00369"></a>00369   <a class="code" href="struct_p_o_s_i_t_i_o_n.html" title="formato del record del file binario di salvataggio automatico delle posizioni">POSITION</a> pos;
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371   <span class="keywordflow">if</span> (<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a> &lt; SEC_PER_WEEK)
+<a name="l00372"></a>00372     {
+<a name="l00373"></a>00373          <span class="comment">// inserimento posizione nel vettore delle posizioni e aggiornamento del contatore</span>
+<a name="l00374"></a>00374          <a class="code" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc" title="vettore delle posizioni acquisite">positions</a>[<a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>] = position;
+<a name="l00375"></a>00375          <a class="code" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80" title="numero di posizioni acquisite">positionCounter</a>++;
+<a name="l00376"></a>00376          <span class="comment">// scrittura posizione su file</span>
+<a name="l00377"></a>00377          pos.day = position.<a class="code" href="class_position.html#a4d19b9a1fd82d298eeed8acf48db18aa">getDate</a>().<a class="code" href="class_date.html#a199f53ba37388e078fc19323fe4b5f32">getDay</a>();
+<a name="l00378"></a>00378          pos.month = position.<a class="code" href="class_position.html#a4d19b9a1fd82d298eeed8acf48db18aa">getDate</a>().<a class="code" href="class_date.html#accc049670308d4107d84d70021bed03c">getMonth</a>();
+<a name="l00379"></a>00379          pos.year = position.<a class="code" href="class_position.html#a4d19b9a1fd82d298eeed8acf48db18aa">getDate</a>().<a class="code" href="class_date.html#a3df4be9a971758c714a3f091171bc8e4">getYear</a>();
+<a name="l00380"></a>00380          pos.hour = position.<a class="code" href="class_position.html#a13a18c15065d6f6e7fcc08e1e784a77b">getTime</a>().<a class="code" href="class_time.html#a733de3bd6b3dfd6827c22c33bbbb0631">getHour</a>();
+<a name="l00381"></a>00381          pos.minute = position.<a class="code" href="class_position.html#a13a18c15065d6f6e7fcc08e1e784a77b">getTime</a>().<a class="code" href="class_time.html#ae4376a7f66cd5314cdf464f46e3663ae">getMinute</a>();
+<a name="l00382"></a>00382          pos.second = position.<a class="code" href="class_position.html#a13a18c15065d6f6e7fcc08e1e784a77b">getTime</a>().<a class="code" href="class_time.html#a194f634efdc8b9cda9b753500bd0a271">getSecond</a>();
+<a name="l00383"></a>00383          pos.lat_sign = position.<a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>().<a class="code" href="class_latitude.html#abe180942340cdbe3a789a90a7c96dd68">getOrientation</a>();
+<a name="l00384"></a>00384          pos.lat_degree = position.<a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>().<a class="code" href="class_latitude.html#a672bbc15db127f89e892cfe8c350eccf">getDegree</a>();
+<a name="l00385"></a>00385          pos.lat_minute = position.<a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>().<a class="code" href="class_latitude.html#ae4376a7f66cd5314cdf464f46e3663ae">getMinute</a>();
+<a name="l00386"></a>00386          pos.lat_second = position.<a class="code" href="class_position.html#a63eb1c380a73380c88a39436b9cf0161">getLatitude</a>().<a class="code" href="class_latitude.html#a194f634efdc8b9cda9b753500bd0a271">getSecond</a>();
+<a name="l00387"></a>00387          pos.lon_sign = position.<a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>().<a class="code" href="class_longitude.html#abe180942340cdbe3a789a90a7c96dd68">getOrientation</a>();
+<a name="l00388"></a>00388          pos.lon_degree = position.<a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>().<a class="code" href="class_longitude.html#a672bbc15db127f89e892cfe8c350eccf">getDegree</a>();
+<a name="l00389"></a>00389          pos.lon_minute = position.<a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>().<a class="code" href="class_longitude.html#ae4376a7f66cd5314cdf464f46e3663ae">getMinute</a>();
+<a name="l00390"></a>00390          pos.lon_second = position.<a class="code" href="class_position.html#a61023fa568ef373cd213a1707153849a">getLongitude</a>().<a class="code" href="class_longitude.html#a194f634efdc8b9cda9b753500bd0a271">getSecond</a>();
+<a name="l00391"></a>00391          <a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a> = fopen(POSITION_FILE, <span class="stringliteral">&quot;ab&quot;</span>);
+<a name="l00392"></a>00392      fwrite(&amp;pos, <span class="keyword">sizeof</span>(pos), 1, <a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>);
+<a name="l00393"></a>00393          fclose(<a class="code" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8" title="riferimento al file di salvataggio delle posizioni acquisite">positionFile</a>);
+<a name="l00394"></a>00394     }
+<a name="l00395"></a>00395   <a class="code" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb" title="direzione attuale (in gradi rispetto al Nord)">actualDirection</a> = direction;
+<a name="l00396"></a>00396   <a class="code" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839" title="velocita&#39; attuale (in Km/h)">actualSpeed</a> = speed;
+<a name="l00397"></a>00397  }
+<a name="l00398"></a>00398 };
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generato Mar 1 Mag 2012 17:16:21 per ATC da&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

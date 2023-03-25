@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ATC: Riferimenti per la classe ATC</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generato da Doxygen 1.7.4 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="compass-icon.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ATC</div>
+   <div id="projectbrief">Advanced Trip Computer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classi</span></a></li>
+      <li><a href="files.html"><span>File</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Elenco&#160;dei&#160;tipi&#160;composti</span></a></li>
+      <li><a href="classes.html"><span>Indice&#160;dei&#160;tipi&#160;composti</span></a></li>
+      <li><a href="hierarchy.html"><span>Gerarchia&#160;delle&#160;classi</span></a></li>
+      <li><a href="functions.html"><span>Membri&#160;dei&#160;composti</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membri pubblici</a> &#124;
+<a href="#pri-methods">Membri privati</a> &#124;
+<a href="#pri-attribs">Attributi privati</a>  </div>
+  <div class="headertitle">
+<div class="title">Riferimenti per la classe ATC</div>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="ATC" --><!-- doxytag: inherits="GPSobserver" -->
+<p>classe principale dell'applicazione Advance Trip Computer  
+ <a href="class_a_t_c.html#details">Continua...</a></p>
+
+<p><code>#include &quot;<a class="el" href="_a_t_c_8_h_source.html">ATC.H</a>&quot;</code></p>
+<div class="dynheader">
+Diagramma delle classi per ATC</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_a_t_c.png" usemap="#ATC_map" alt=""/>
+  <map id="ATC_map" name="ATC_map">
+<area href="class_g_p_sobserver.html" title="classe astratta per la notifica degli eventi generati dal dispositivo GPS" alt="GPSobserver" shape="rect" coords="0,0,88,24"/>
+</map>
+ </div></div>
+
+<p><a href="class_a_t_c-members.html">Elenco di tutti i membri.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membri pubblici</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#aab016d6c5eff3f457fb161e3491b51fa">ATC</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">costruttore  <a href="#aab016d6c5eff3f457fb161e3491b51fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a0e48e053651b533d8e9357d50738f7a6">isTrip</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">stato del viaggio  <a href="#a0e48e053651b533d8e9357d50738f7a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a432268a178004a887536e1c6facc664c">beginJourney</a> (char password[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">inizio del viaggio e memorizzazione della password  <a href="#a432268a178004a887536e1c6facc664c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a9794ab29846fa1d68f1dab43d01b2966">endJourney</a> (char password[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fine del viaggio  <a href="#a9794ab29846fa1d68f1dab43d01b2966"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a0384faec0aa3400cc8a299c1cb93c319">getJourneyInfo</a> (double *totalDistance, double *elapsedTime, double *meanSpeed)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">richiesta informazioni sul viaggio  <a href="#a0384faec0aa3400cc8a299c1cb93c319"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a494cb7655e6548b0f4ac74cc03ce4a4c">getPastPosition</a> (<a class="el" href="class_date.html">Date</a> date, <a class="el" href="class_time.html">Time</a> time, char password[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">richiesta informazioni su una posizione nel corso del viaggio  <a href="#a494cb7655e6548b0f4ac74cc03ce4a4c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a2aa1666500028e4d739138f46ce65c0b">getActualPosition</a> (double *speed, double *direction)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">richiesta posizione attuale  <a href="#a2aa1666500028e4d739138f46ce65c0b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a9bb3823cee7e8d3a375c80a8f9556237">saveToFile</a> (char filename[], char password[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">salvataggio su file testuale delle posizioni registrate  <a href="#a9bb3823cee7e8d3a375c80a8f9556237"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a0c06db972a947763c9cb9215e37b46ef">GPSnotify</a> (<a class="el" href="class_position.html">Position</a> position, double direction, double speed)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione ereditata dalla classe <a class="el" href="class_g_p_sobserver.html" title="classe astratta per la notifica degli eventi generati dal dispositivo GPS">GPSobserver</a> ed invocata dalla classe <a class="el" href="class_g_p_s.html" title="classe per l&#39;incapsulazione del dispositivo GPS">GPS</a> per l'aggiornamento della posizione  <a href="#a0c06db972a947763c9cb9215e37b46ef"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Membri privati</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a3e0b47a6c8b28aee6f2e3468bf204bf2">checkPassword</a> (char password[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">verifica la password fornita con la versione cifrata nel file  <a href="#a3e0b47a6c8b28aee6f2e3468bf204bf2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a3e9c7262773f32f75bb894133f029049">getTotalDistance</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">calcola la distanza totale percorsa  <a href="#a3e9c7262773f32f75bb894133f029049"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#a79b76f666c7c095c3e4d283b6dd21955">getElapsedTime</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">calcola il tempo trascorso dalla partenza  <a href="#a79b76f666c7c095c3e4d283b6dd21955"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#ae113b9849520a8b5b16e52651e6b8704">loadFromFile</a> (const char filename[])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">carica le posizioni da file  <a href="#ae113b9849520a8b5b16e52651e6b8704"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Attributi privati</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae616ca9bc885eebe7572f76abc5f62a2"></a><!-- doxytag: member="ATC::trip" ref="ae616ca9bc885eebe7572f76abc5f62a2" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#ae616ca9bc885eebe7572f76abc5f62a2">trip</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">stato dell'applicazione (viaggio in corso) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc44bce37d6bc082490a936ba0804f80"></a><!-- doxytag: member="ATC::positionCounter" ref="adc44bce37d6bc082490a936ba0804f80" args="" -->
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#adc44bce37d6bc082490a936ba0804f80">positionCounter</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di posizioni acquisite <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa883e12464a61930a0d5cce61e394fdb"></a><!-- doxytag: member="ATC::actualDirection" ref="aa883e12464a61930a0d5cce61e394fdb" args="" -->
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#aa883e12464a61930a0d5cce61e394fdb">actualDirection</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">direzione attuale (in gradi rispetto al Nord) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af29763fa02839aca51353f91fba21839"></a><!-- doxytag: member="ATC::actualSpeed" ref="af29763fa02839aca51353f91fba21839" args="" -->
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#af29763fa02839aca51353f91fba21839">actualSpeed</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">velocita' attuale (in Km/h) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac17d0e3d420545b0cbe7c718cf026ddc"></a><!-- doxytag: member="ATC::positions" ref="ac17d0e3d420545b0cbe7c718cf026ddc" args="" -->
+<a class="el" href="class_position.html">Position</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#ac17d0e3d420545b0cbe7c718cf026ddc">positions</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">vettore delle posizioni acquisite <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9292230a621b36748b346b1eabd5ad8"></a><!-- doxytag: member="ATC::positionFile" ref="aa9292230a621b36748b346b1eabd5ad8" args="" -->
+FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_t_c.html#aa9292230a621b36748b346b1eabd5ad8">positionFile</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">riferimento al file di salvataggio delle posizioni acquisite <br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Descrizione dettagliata</h2>
+<div class="textblock"><p>classe principale dell'applicazione Advance Trip Computer </p>
+</div><hr/><h2>Documentazione dei costruttori e dei distruttori</h2>
+<a class="anchor" id="aab016d6c5eff3f457fb161e3491b51fa"></a><!-- doxytag: member="ATC::ATC" ref="aab016d6c5eff3f457fb161e3491b51fa" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_t_c.html">ATC</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>costruttore </p>
+<p>distruttore</p>
+<dl class="note"><dt><b>Nota:</b></dt><dd>se esiste il file delle posizioni inizializza l'oggetto nello stato di viaggio in corso </dd></dl>
+
+</div>
+</div>
+<hr/><h2>Documentazione delle funzioni membro</h2>
+<a class="anchor" id="a432268a178004a887536e1c6facc664c"></a><!-- doxytag: member="ATC::beginJourney" ref="a432268a178004a887536e1c6facc664c" args="(char password[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">beginJourney </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>password</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>inizio del viaggio e memorizzazione della password </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>password utente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e0b47a6c8b28aee6f2e3468bf204bf2"></a><!-- doxytag: member="ATC::checkPassword" ref="a3e0b47a6c8b28aee6f2e3468bf204bf2" args="(char password[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">checkPassword </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>password</em>[]</td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>verifica la password fornita con la versione cifrata nel file </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>password utente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9794ab29846fa1d68f1dab43d01b2966"></a><!-- doxytag: member="ATC::endJourney" ref="a9794ab29846fa1d68f1dab43d01b2966" args="(char password[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">endJourney </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>password</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>fine del viaggio </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>password utente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Nota:</b></dt><dd>se la password e' errata non termina il viaggio </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2aa1666500028e4d739138f46ce65c0b"></a><!-- doxytag: member="ATC::getActualPosition" ref="a2aa1666500028e4d739138f46ce65c0b" args="(double *speed, double *direction)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getActualPosition </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>richiesta posizione attuale </p>
+<dl><dt><b>Valori di ritorno:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">speed</td><td>velocità (Km/h) </td></tr>
+    <tr><td class="paramname">direction</td><td>direzione rispetto al Nord (gradi) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>posizione attuale </dd></dl>
+<dl class="note"><dt><b>Nota:</b></dt><dd>viene restituita l'ultima posizione registrata, o una posizione nulla se il viaggio non è in corso </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a79b76f666c7c095c3e4d283b6dd21955"></a><!-- doxytag: member="ATC::getElapsedTime" ref="a79b76f666c7c095c3e4d283b6dd21955" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getElapsedTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>calcola il tempo trascorso dalla partenza </p>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>tempo (ore) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0384faec0aa3400cc8a299c1cb93c319"></a><!-- doxytag: member="ATC::getJourneyInfo" ref="a0384faec0aa3400cc8a299c1cb93c319" args="(double *totalDistance, double *elapsedTime, double *meanSpeed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getJourneyInfo </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>totalDistance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>elapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>meanSpeed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>richiesta informazioni sul viaggio </p>
+<dl><dt><b>Valori di ritorno:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">totalDistance</td><td>distanza totale percorsa (Km) </td></tr>
+    <tr><td class="paramname">elapsedTime</td><td>tempo trascorso dalla partenza </td></tr>
+    <tr><td class="paramname">meanSpeed</td><td>velocita' media del viaggio </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a494cb7655e6548b0f4ac74cc03ce4a4c"></a><!-- doxytag: member="ATC::getPastPosition" ref="a494cb7655e6548b0f4ac74cc03ce4a4c" args="(Date date, Time time, char password[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPastPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_date.html">Date</a>&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_time.html">Time</a>&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>password</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>richiesta informazioni su una posizione nel corso del viaggio </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>data richiesta </td></tr>
+    <tr><td class="paramname">time</td><td>orario richiesto </td></tr>
+    <tr><td class="paramname">password</td><td>password utente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>posizione al tempo indicato </dd></dl>
+<dl class="note"><dt><b>Nota:</b></dt><dd>se la password è errata o il viaggio non e' in corso restituisce la posizione 0^0'0"N 0^0'0"E </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e9c7262773f32f75bb894133f029049"></a><!-- doxytag: member="ATC::getTotalDistance" ref="a3e9c7262773f32f75bb894133f029049" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getTotalDistance </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>calcola la distanza totale percorsa </p>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>distanza totale (Km) </dd></dl>
+<dl class="note"><dt><b>Nota:</b></dt><dd>algoritmo potenzialmente inefficiente </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c06db972a947763c9cb9215e37b46ef"></a><!-- doxytag: member="ATC::GPSnotify" ref="a0c06db972a947763c9cb9215e37b46ef" args="(Position position, double direction, double speed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GPSnotify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>funzione ereditata dalla classe <a class="el" href="class_g_p_sobserver.html" title="classe astratta per la notifica degli eventi generati dal dispositivo GPS">GPSobserver</a> ed invocata dalla classe <a class="el" href="class_g_p_s.html" title="classe per l&#39;incapsulazione del dispositivo GPS">GPS</a> per l'aggiornamento della posizione </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>posizione attuale </td></tr>
+    <tr><td class="paramname">direction</td><td>direzione rispetto al Nord (gradi) </td></tr>
+    <tr><td class="paramname">speed</td><td>velocita' (Km/h) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementa <a class="el" href="class_g_p_sobserver.html#ab1f94edbec71777a2d10a90ed45730dc">GPSobserver</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e48e053651b533d8e9357d50738f7a6"></a><!-- doxytag: member="ATC::isTrip" ref="a0e48e053651b533d8e9357d50738f7a6" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">isTrip </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>stato del viaggio </p>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>vero = viaggio in corso, falso = viaggio non in corso </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae113b9849520a8b5b16e52651e6b8704"></a><!-- doxytag: member="ATC::loadFromFile" ref="ae113b9849520a8b5b16e52651e6b8704" args="(const char filename[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>carica le posizioni da file </p>
+<dl class="return"><dt><b>Restituisce:</b></dt><dd>numero di posizioni caricate, -1 in caso di errore </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9bb3823cee7e8d3a375c80a8f9556237"></a><!-- doxytag: member="ATC::saveToFile" ref="a9bb3823cee7e8d3a375c80a8f9556237" args="(char filename[], char password[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">saveToFile </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>filename</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>password</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>salvataggio su file testuale delle posizioni registrate </p>
+<dl><dt><b>Parametri:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>denominazione/percorso del file </td></tr>
+    <tr><td class="paramname">password</td><td>password utente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentazione per questa classe Ã¨ stata generata a partire dal seguente file:<ul>
+<li>C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/<a class="el" href="_a_t_c_8_h_source.html">ATC.H</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Generato Mar 1 Mag 2012 17:16:21 per ATC da&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>

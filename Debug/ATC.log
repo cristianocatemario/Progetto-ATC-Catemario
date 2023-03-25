@@ -1,0 +1,6 @@
+﻿  des.c
+  com.c
+  Generazione del codice in corso...
+  main.cpp
+com.obj : warning LNK4075: '/EDITANDCONTINUE' ignorato a causa della specifica di '/SAFESEH'
+  ATC.vcxproj -> C:\Users\flomb\Desktop\Esempi-TPSIT\QUATTRO\CapA4\Es16_progettoATC\ATC_Windows\Debug\ATC.exe

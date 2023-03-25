@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ATC:  File sorgente C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/GPS2UTM.H</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generato da Doxygen 1.7.4 -->
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="compass-icon.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ATC</div>
+   <div id="projectbrief">Advanced Trip Computer</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">C:/Documents and Settings/Giorgio/Desktop/ATC-Windows7 (VS2010)/GPS2UTM.H</div>  </div>
+</div>
+<div class="contents">
+<a href="_g_p_s2_u_t_m_8_h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#define PI                                              3.141592653589793</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#define WGS84_E2                                0.006694379990197</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define WGS84_E4                                WGS84_E2*WGS84_E2</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define WGS84_E6                                WGS84_E4*WGS84_E2</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define WGS84_SEMI_MAJOR_AXIS   6378137.0</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define WGS84_SEMI_MINOR_AXIS   6356752.314245</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define UTM_LONGITUDE_OF_ORIGIN 3.0/180.0*PI</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define UTM_LATITUDE_OF_ORIGIN  0.0</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define UTM_FALSE_EASTING               500000.0</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define UTM_FALSE_NORTHING_N    0.0</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define UTM_FALSE_NORTHING_S    10000000.0</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define UTM_SCALE_FACTOR                0.9996</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="keywordtype">double</span> m_calc(<span class="keywordtype">double</span> latitude)
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023  <span class="keywordflow">return</span> (1.0 - WGS84_E2/4.0 - 3.0*WGS84_E4/64.0 - 5.0*WGS84_E6/256.0)*latitude - (3.0*WGS84_E2/8.0 + 3.0*WGS84_E4/32.0 + 45.0*WGS84_E6/1024.0)*sin(2.0*latitude) + (15.0*WGS84_E4/256.0 + 45.0*WGS84_E6/1024.0)*sin(4.0*latitude) - (35.0*WGS84_E6/3072.0)*sin(6.0*latitude);
+<a name="l00024"></a>00024 }
+<a name="l00025"></a>00025 
+<a name="l00033"></a><a class="code" href="_g_p_s2_u_t_m_8_h.html#aa9047adb459d1f13f69425105b1aaed1">00033</a> <span class="keywordtype">void</span> <a class="code" href="_g_p_s2_u_t_m_8_h.html#aa9047adb459d1f13f69425105b1aaed1" title="conversione di coordinate WGS84 (latitudine/longitudine) in coordinate UTM (metri)">GPS2UTM</a>(<span class="keywordtype">double</span> latitude, <span class="keywordtype">double</span> longitude, <span class="keywordtype">double</span>* east, <span class="keywordtype">double</span>* north)
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035  <span class="keywordtype">int</span> int_zone;
+<a name="l00036"></a>00036  <span class="keywordtype">double</span> M, M_origin, A, A2, e2_prim, C, T, v;
+<a name="l00037"></a>00037  
+<a name="l00038"></a>00038  int_zone = (int)(longitude/6.0);
+<a name="l00039"></a>00039  <span class="keywordflow">if</span> (longitude &lt; 0)
+<a name="l00040"></a>00040    int_zone--;
+<a name="l00041"></a>00041  longitude -= (double)(int_zone)*6.0;
+<a name="l00042"></a>00042  longitude *= PI/180.0;
+<a name="l00043"></a>00043  latitude *= PI/180.0;
+<a name="l00044"></a>00044  M = WGS84_SEMI_MAJOR_AXIS*m_calc(latitude);
+<a name="l00045"></a>00045  M_origin = WGS84_SEMI_MAJOR_AXIS*m_calc(UTM_LATITUDE_OF_ORIGIN);
+<a name="l00046"></a>00046  A = (longitude - UTM_LONGITUDE_OF_ORIGIN)*cos(latitude);
+<a name="l00047"></a>00047  A2 = A*A;
+<a name="l00048"></a>00048  e2_prim = WGS84_E2/(1.0 - WGS84_E2);
+<a name="l00049"></a>00049  C = e2_prim*pow(cos(latitude),2.0);
+<a name="l00050"></a>00050  T = tan(latitude);
+<a name="l00051"></a>00051  T *= T;
+<a name="l00052"></a>00052  v = WGS84_SEMI_MAJOR_AXIS/sqrt(1.0 - WGS84_E2*pow(sin(latitude),2.0));
+<a name="l00053"></a>00053  *north = UTM_SCALE_FACTOR*(M - M_origin + v*tan(latitude)*(A2/2.0 + (5.0 - T + 9.0*C + 4.0*C*C)*A2*A2/24.0 + (61.0 - 58.0*T + T*T + 600.0*C - 330.0*e2_prim)*A2*A2*A2/720.0));
+<a name="l00054"></a>00054  <span class="keywordflow">if</span> (latitude &lt; 0)
+<a name="l00055"></a>00055    *north += UTM_FALSE_NORTHING_S;
+<a name="l00056"></a>00056  *east = UTM_FALSE_EASTING + UTM_SCALE_FACTOR*v*(A + (1.0 - T + C)*A2*A/6.0 + (5.0 - 18.0*T + T*T + 72.0*C - 58.0*e2_prim)*A2*A2*A/120.0);
+<a name="l00057"></a>00057  <span class="keywordflow">return</span>;
+<a name="l00058"></a>00058 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generato Mar 1 Mag 2012 17:16:21 per ATC da&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
+</body>
+</html>
