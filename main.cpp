@@ -12,7 +12,7 @@ unsigned long WINAPI update(void* arg)
  while (active)
       {
 	   (*gps).update();
-	   Sleep(180);
+	   Sleep(100);
       }
  ExitThread(0);
 }
