@@ -1,12 +1,21 @@
-
+/*!	\file	main.cpp
+	\author G. Meini
+	\date	20/11/2011
+*/
 #include <cstdio>
-
 #include "ATC.H"
-
+/*!	\property gps
+	\brief variabile puntatore alla porta seriale GPS
+*/
 GPS* gps;
+/*!	\property active
+	\brief variabile di tipo bool per la ricerca dell'attivazione della porta o meno
+*/
 bool active;
 
-// thread di invocazione del metodo update della classe GPS
+/*!	\class update
+	\brief thread di invocazione del metodo update della classe GPS
+*/
 unsigned long WINAPI update(void* arg)
 {
  while (active)
@@ -17,15 +26,91 @@ unsigned long WINAPI update(void* arg)
  ExitThread(0);
 }
 
+/*!	\class main
+	\brief main
+*/
 int main(int argc, char* argv[])
 {
+/*!	\property GPS_port
+	\brief variabile per la ricerca della porta seriale GPS
+*/
  unsigned char GPS_port;
- char command[16], password[32], filename[64];
+ /*! 
+	\property command
+	\brief comando che eseguirà la porta GPS
+*/
+ char command[16];
+ /*!
+	\property password
+	\brief password per accedere alla porta GPS
+*/
+ char password[32];
+ /*!
+   \property filename
+   \brief nome del file per accedere alla porta GPS
+*/
+ char filename[64];
  HANDLE thread;
- double speed, direction;
- double totalDistance, elapsedTime, meanSpeed;
+ /*!
+   \property speed
+   \brief velocità con il quale viaggia il dispositivo GPS
+*/
+ double speed;
+ /*!
+   \property direzione
+   \brief direzione per il quale viaggia il dispositivo GPS
+*/
+ double direction;
+ /*!
+   \property totalDistance
+   \brief distanza totale percorsa dal dispositivo GPS
+*/
+ double totalDistance;
+ /*!
+   \property elapsedTime
+   \brief tempo trascorso in una determinata distanza
+*/
+ double elapsedTime;
+ /*!
+   \property meanSpeed
+   \brief velocità media del dispositivo GPS
+*/
+ double meanSpeed;
+ /*!
+   \property pos
+   \brief variabile di tipo pos
+*/
  Position pos;
- unsigned int day, month, year, hour, minute, second;
+ /*!
+   \property day
+   \brief valore che identifica il giorno inserito dall'utente nel dispositivo GPS
+*/
+ unsigned int day;
+ /*!
+   \property month
+   \brief valore che identifica il mese inserito dall'utente nel dispositivo GPS
+*/
+ unsigned int month;
+ /*!
+   \property year
+   \brief valore che identifica l'anno inserito dall'utente nel dispositivo GPS
+ */
+ unsigned int year;
+ /*!
+   \property hour
+   \brief valore che identifica l'ora inserito dall'utente nel dispositivo GPS
+ */
+ unsigned int hour;
+ /*!
+   \property minute
+   \brief valore che identifica il minuto inserito dall'utente nel dispositivo GPS
+*/
+ unsigned int minute;
+ /*!
+   \property second
+   \brief valore che identifica il secondo inserito dall'utente nel dispositivo GPS
+   */
+ unsigned int second;
 
  if (argc != 2)
    {
