@@ -112,7 +112,7 @@ int main(int argc, char* argv[])
    */
  unsigned int second;
 
- if (argc != 2)
+ if (argc != 2) //se alla porta è connesso il modulo GPS
    {
 	printf("%s GPS-port\r\n",argv[0]);
     return -1;
