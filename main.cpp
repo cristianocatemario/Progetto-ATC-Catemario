@@ -128,7 +128,7 @@ int main(int argc, char* argv[])
 	thread = CreateThread(NULL,1024,&update,NULL,0,NULL);
    }
 
- do {
+ do {  //ciclo del menu di comandi
 	 printf("B: Begin!\r\n");
 	 printf("E: End!\r\n");
 	 printf("I: Info?\r\n");
